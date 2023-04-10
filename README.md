@@ -12,6 +12,10 @@
 
 https://github.com/codestates-seb/seb41_main_032
 
+### 사용 API
+https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15094808
+https://apiportal.koreainvestment.com/intro
+
 ### 사용 스택
 <div align=left> 
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> 
