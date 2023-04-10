@@ -64,6 +64,7 @@ export const Detail = () => {
               <div>업종 {current?.bstp_kor_isnm}</div>
             </div>
             <div className="now">
+              <h4>본 데이터는 실시간으로 반영됩니다</h4>
               <DataTable output={current}></DataTable>
             </div>
           </FirstDiv>
