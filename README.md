@@ -2,5 +2,4 @@
 
 ##개요
 
-배포 
-배포 주
+배포 주소 https://darling-custard-f8aaa2.netlify.appㅇ
