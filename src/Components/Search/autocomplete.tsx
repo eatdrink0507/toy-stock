@@ -3,6 +3,7 @@ import data from "../../data/data.json";
 import { useState, useEffect } from "react";
 import { SearchList } from "../../data/types";
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 type Props = {
   keyword: string;
@@ -11,7 +12,8 @@ type Props = {
 const Div = styled.div`
   background-color: white;
   margin-left: 30px;
-  position: relative;
+  margin-top: 50px;
+  position: fixed;
   z-index: 300;
   width: 252px;
   display: block;
@@ -20,7 +22,20 @@ const Div = styled.div`
   overflow: auto;
   border: dotted 2px gray;
 `;
+const MobileDiv = styled.div`
+  background-color: white;
+  margin: 44px auto auto auto;
+  position: fixed;
+  z-index: 300;
+  width: 49%;
+  display: block;
+  max-height: 490px;
+  height: auto;
+  overflow: auto;
+  border: dotted 2px gray;
+`;
 const Li = styled.li`
+  z-index: 300;
   margin: 5px;
   :hover {
     background-color: #fbffb1;
@@ -28,6 +43,7 @@ const Li = styled.li`
   list-style: none;
 `;
 export const Autocomplete = ({ keyword, setKeyword }: Props) => {
+  const isPc = useMediaQuery({ minWidth: 500 });
   const navigate = useNavigate();
   const [sort, setSort] = useState<SearchList[]>();
   const list: SearchList[] = data;
@@ -48,21 +64,42 @@ export const Autocomplete = ({ keyword, setKeyword }: Props) => {
   }, [keyword]);
 
   return (
-    <Div>
-      {sort?.map((el) => (
-        <Li
-          key={el.srtnCd}
-          onClick={() => {
-            navigate(`/detail/${el.srtnCd}`, {
-              state: { code: `${el.srtnCd}` },
-            });
-            setKeyword("");
-          }}
-          onMouseDown={(e) => e.preventDefault()}
-        >
-          {el.itmsNm}
-        </Li>
-      ))}
-    </Div>
+    <>
+      {isPc ? (
+        <Div>
+          {sort?.map((el) => (
+            <Li
+              key={el.srtnCd}
+              onClick={() => {
+                navigate(`/detail/${el.srtnCd}`, {
+                  state: { code: `${el.srtnCd}` },
+                });
+                setKeyword("");
+              }}
+              onMouseDown={(e) => e.preventDefault()}
+            >
+              {el.itmsNm}
+            </Li>
+          ))}
+        </Div>
+      ) : (
+        <MobileDiv>
+          {sort?.map((el) => (
+            <Li
+              key={el.srtnCd}
+              onClick={() => {
+                navigate(`/detail/${el.srtnCd}`, {
+                  state: { code: `${el.srtnCd}` },
+                });
+                setKeyword("");
+              }}
+              onMouseDown={(e) => e.preventDefault()}
+            >
+              {el.itmsNm}
+            </Li>
+          ))}
+        </MobileDiv>
+      )}
+    </>
   );
 };

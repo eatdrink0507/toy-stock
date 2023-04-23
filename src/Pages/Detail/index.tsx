@@ -1,9 +1,9 @@
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import useGetNewPrice from "../../Hooks/useGetNewPrice";
-import useGetInfo from "../../Hooks/useGetInfo";
-import { getStatus } from "../../Hooks/useGetStatus";
+import useGetNewPrice from "../../Functions/useGetNewPrice";
+import useGetInfo from "../../Functions/useGetInfo";
+import { getStatus } from "../../Functions/getStatus";
 
 import { DataTable } from "./DataTable";
 import { WeeklyTable } from "./WeeklyTable";
@@ -12,6 +12,7 @@ import { Loader } from "../../Style/Loader";
 const Div = styled.div`
   display: grid;
   grid-template-rows: 1fr 1.2fr;
+  padding: 10px;
 `;
 
 const FirstDiv = styled.div`

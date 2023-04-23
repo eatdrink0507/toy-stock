@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import Chart from "react-apexcharts";
 import { ChartLoader } from "../../Style/ChartLoader";
-import useGetWeeklyData from "../../Hooks/useGetWeeklyData";
+import useGetWeeklyData from "../../Functions/useGetWeeklyData";
 
 const Div = styled.div`
   margin: 20px auto 20px 0;

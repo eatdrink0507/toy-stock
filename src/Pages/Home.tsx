@@ -2,7 +2,7 @@ import axios from "axios";
 import { Response } from "../data/types";
 import { ReactElement } from "react";
 import { useState, useEffect } from "react";
-import usePagination from "../Hooks/usePagination";
+import usePagination from "../Functions/usePagination";
 
 const Home = (): ReactElement => {
   const [isLoading, setIsLoading] = useState(true);
