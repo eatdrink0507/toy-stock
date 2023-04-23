@@ -40,16 +40,18 @@ export const DataTable = ({ output }: Props) => {
       <div>누적 거래대금 {turnNumber(output?.acml_tr_pbmn)} </div>
       <div>상장주수 {turnNumber(output?.lstn_stcn)} </div>
       <div>
-        250일 최고가 {output?.d250_hgpr_date} 기준 {output?.d250_hgpr}
+        250일 최고가 {output?.d250_hgpr_date} 기준{" "}
+        {turnNumber(output?.d250_hgpr)}
       </div>
       <div>
-        250일 최저가 {output?.d250_lwpr_date} 기준 {output?.d250_lwpr}
+        250일 최저가 {output?.d250_lwpr_date} 기준{" "}
+        {turnNumber(output?.d250_lwpr)}
       </div>
       <div>
-        52주 최고가 {output?.w52_hgpr_date} 기준 {output?.w52_hgpr}
+        52주 최고가 {output?.w52_hgpr_date} 기준 {turnNumber(output?.w52_hgpr)}
       </div>
       <div>
-        52주 최저가 {output?.w52_lwpr_date} 기준 {output?.w52_lwpr}
+        52주 최저가 {output?.w52_lwpr_date} 기준 {turnNumber(output?.w52_lwpr)}
       </div>
       <div>EPS {output?.eps}</div>
       <div>BPS {output?.bps}</div>
