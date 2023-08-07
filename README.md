@@ -52,7 +52,9 @@ https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15094808
 
 검색하다가 마우스가 바깥을 클릭하면 자동 검색어가 사라지고, 다시 검색창을 클릭하면 자동 검색어가 보이도록 했습니다.
 
-<img width="514" alt="스크린샷 2023-04-11 00 50 06" src="https://user-images.githubusercontent.com/111216062/230941907-61cda84f-961e-4fe2-ae07-1bbde9a5196d.png">
+
 
 3. 모바일 사이즈
-   ![mobileview](https://github.com/eatdrink0507/toy-stock/assets/111216062/d6bec58b-a9a8-449a-9d13-a997a2c44d25)
+
+
+![mobileview](https://github.com/eatdrink0507/toy-stock/assets/111216062/d6bec58b-a9a8-449a-9d13-a997a2c44d25)
